@@ -48,7 +48,23 @@ public class BubbleSorter {
 	 }
 
 	public static void main(String[] args) {
-		
+		int values[] = new int[6] ;
+		//for loop that fills the array values with 6 random numbers.
+		for(int i = 0; i < values.length; i++){
+			values[i] = (int)(Math.random() * 10);
+		}
+		   System.out.println("Original Values:  ");
+		   for(int element: values){
+		    System.out.print(element + " ");
+		   }
+		   
+		   bubbleSort(values);//Calls the bubbleSort method.
+		   
+		   System.out.println();
+		   System.out.println("Sorted Values:  ");
+		   for(int element: values){
+		    System.out.print(element + " ");
+		   }
 
 	}
 
