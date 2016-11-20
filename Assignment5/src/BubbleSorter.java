@@ -7,7 +7,40 @@
  * method for performing a bubble sort on an integer array.
  *
  */
-public class BubbleSorter {
+class BubbleSorter {
+	
+	/**
+	 * The Node class stores a list element
+	 * and a reference to the next node.
+	 */
+	private class Node{
+		String value;
+		Node next;
+		Node prev;
+		
+		/**
+		 * Constructor
+		 * @param val The element to be stored in the node.
+		 * @param n The reference to the successor nod.
+		 * @param p The reference to the predecessor node.
+		 */
+		Node(String val, Node n, Node p){
+			value = val;
+			next = n;
+			prev = p;
+		}
+			
+		/**
+		 * Constructor
+		 * @param val The element stored in the node.
+		 */
+		Node(String val){
+			this(val, null, null);
+			}
+		
+	}
+	private Node first; //Head of the List
+	private Node last; //Last element on the list.
 	
 	 /**
 	  * The bubbleSort method uses the bubble sort 
